@@ -7,6 +7,7 @@
   <title>TinDog</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <!-- always put css after bootstrap in case we are targeting the same selectors -->
   <link
     rel="stylesheet"
     href="./css/style.css"
@@ -17,8 +18,9 @@
 
   <!-- Title -->
   <section id="title" class="gradient-background">
-    <div class="container col-xxl-8 px-4 py-5 pb-0 ">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5 pb-0 ">
+    <!-- we changed py-5 into pt-5 because py=pt-5+pb-5 and we want only top to have margin -->
+    <div class="container col-xxl-8 px-4 pt-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 pt-5 ">
         <div class="col-10 col-sm-8 col-lg-6">
           <img src="./images/iphone.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"  height="200" loading="lazy" alt="phone with dog selfie" >
         </div>
@@ -45,7 +47,7 @@
 
   <!-- Features -->
   <section id="features">
-    <div class="container px-4 py-5" id="hanging-icons">
+    <div class="container my-5">
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="col d-flex align-items-start">
           <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
@@ -61,6 +63,7 @@
             <p>So easy to use, even your dog could do it.</p>
           </div>
         </div>
+
         <div class="col d-flex align-items-start">
           <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
             <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
@@ -72,6 +75,7 @@
             <p>We have all the dogs, the greatest dogs.</p>
           </div>
         </div>
+
         <div class="col d-flex align-items-start">
           <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
             <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-arrow-through-heart"
@@ -89,6 +93,7 @@
   </section>
 
   <!-- Testimonial -->
+  <!-- it's possible to use jumbotron example -->
   <section id="testimonial" >
     <section id="reference" class="container">
       <div class="row d-flex justify-content-center">
@@ -113,20 +118,23 @@
     </section>
 
     <div class="container" id="logos">
+      <!-- need class row to create columns -->
       <div class="row">
         <div class="col-md-3 col-sm-12 mb-2"><img src="./images/techcrunch.png" alt="techcrunch logo" height="30px" /></div>
         <div class="col-md-3 col-sm-12 mb-2"><img src="./images/mashable.png" alt="mashable logo" height="30px" /></div>
         <div class="col-md-3 col-sm-12 mb-2"><img src="./images/bizinsider.png" alt="business insider logo" height="30px" /></div>
-        <div class="col-md-3 col-sm-12 mb-2"><img src="./images/tnw.png" height="30px" /></div>
+        <div class="col-md-3 col-sm-12 mb-2"><img src="./images/tnw.png" alt="tnw logo" height="30px" /></div>
       </div>
     </div>
   </section>
+
   <!-- Pricing -->
   <section id="pricing" class="container py-3">
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
       <h2 class="display-4 fw-normal text-body-emphasis">A Plan for Every Dog's Needs</h2>
       <p class="fs-5 text-body-secondary">Simple and affordable price plans for you and your dog.</p>
     </div>
+
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
       <div class="col">
         <div class="card mb-4 rounded-3 shadow-sm">
@@ -184,7 +192,7 @@
     <div class="container py-3">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5">
         <div class="col mb-0">
-          <p class="text-body-secondary">© Tindog</p>
+          <p class="text-body-secondary">© TinDog</p>
         </div>
     
         <div class="col mb-3">
